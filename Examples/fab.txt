@@ -1,0 +1,23 @@
+fib n:
+    OUT n
+    IFR n, 1
+    RET 1
+    IFR n, 0
+    RET 1
+    IFR n, 2
+    RET 1
+    MOV AX, n
+    SUB AX, 1
+    MOV BX, AX
+    SUB BX, 1
+    MOV CX, 0
+	ADD CX, fib AX
+	ADD CX, fib BX
+	RET CX
+
+main:
+    st = "Fibonacchi prog. Enter number;"
+    OUT st
+    t = 0
+	INP t
+	OUT fib t

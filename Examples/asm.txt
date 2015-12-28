@@ -1,0 +1,13 @@
+fib f s:
+	ADD f, s
+	OUT f
+	RET f
+
+main:
+    ALC st
+	AX = 1
+	ALC k
+	k=3
+	OUT k
+    st = "Hello"
+	OUT fib 3 4
